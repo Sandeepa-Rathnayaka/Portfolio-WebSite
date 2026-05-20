@@ -1,8 +1,8 @@
-import React from 'react';
-import { MapPin, GraduationCap, Award, Code2 } from 'lucide-react';
-import { personal, education, certifications } from '../data/portfolio';
-import { useInView } from '../hooks/useInView';
-import './About.css';
+import React from "react";
+import { MapPin, GraduationCap, Award, Code2 } from "lucide-react";
+import { personal, education, certifications } from "../data/portfolio";
+import { useInView } from "../hooks/useInView";
+import "./About.css";
 
 export default function About() {
   const [ref, inView] = useInView();
@@ -10,19 +10,24 @@ export default function About() {
   return (
     <section className="section" id="about" ref={ref}>
       <div className="container">
-        <div className={`about-grid ${inView ? 'in-view' : ''}`}>
+        <div className={`about-grid ${inView ? "in-view" : ""}`}>
           {/* Left */}
           <div className="about-left">
             <p className="section-label">About Me</p>
-            <h2 className="section-title">Crafting digital experiences with precision</h2>
+            <h2 className="section-title">
+              Crafting digital experiences with precision
+            </h2>
             <p className="about-bio">
-              I'm a Software Engineer with a strong background in both Quality Assurance and Fullstack Development. 
-              My passion lies at the intersection of building robust web applications and ensuring they work flawlessly.
+              I'm a Software Engineer with a strong background in both Quality
+              Assurance and Fullstack Development. My passion lies at the
+              intersection of building robust web applications and ensuring they
+              work flawlessly.
             </p>
             <p className="about-bio">
-              Currently pursuing my BSc. in Information Technology at SLIIT, I've gained hands-on experience 
-              developing enterprise applications, conducting AI/ML research, and delivering production-grade software 
-              while maintaining the highest quality standards.
+              I hold a BSc. (Hons) in Information Technology from SLIIT, where I
+              gained hands-on experience developing enterprise applications,
+              conducting AI/ML research, and delivering production-grade
+              software while maintaining the highest quality standards.
             </p>
 
             <div className="about-info-grid">
@@ -73,7 +78,9 @@ export default function About() {
                     <div className="cert-dot" />
                     <div>
                       <div className="cert-name">{c.name}</div>
-                      <div className="cert-meta">{c.issuer} · {c.year}</div>
+                      <div className="cert-meta">
+                        {c.issuer} · {c.year}
+                      </div>
                     </div>
                   </div>
                 ))}
